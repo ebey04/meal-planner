@@ -1,3 +1,17 @@
+
+.visually-hidden {
+  position: absolute;
+  left: -999px;
+}
+.visually-hidden:focus {
+  position: static;
+  left: auto;
+  background: yellow;
+  padding: 5px;
+}
+
+
+
 body{
   display: grid;
     display: grid;
