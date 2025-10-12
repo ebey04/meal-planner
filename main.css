@@ -1,3 +1,6 @@
+/* ===================
+01. Utilities
+======================*/
 
 .sr-only {
   position: absolute;
@@ -10,7 +13,9 @@
   padding: 5px;
 }
 
-
+/* ===========================
+   02. Layout
+   =========================== */
 
 body{
   display: grid;
@@ -22,6 +27,20 @@ body{
   font-family: sans-serif;
   
 }
+
+button:hover {
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#recipes, #groceries {
+  text-align: center;
+}
+/* ===========================
+   03. Recipe Screen
+   =========================== */
 
 #recipes{
   margin: 0 auto;
@@ -42,6 +61,10 @@ body{
 #recipes input{
   margin: 1rem auto;
 }
+
+/* ===========================
+   04. Meal Planner Screen
+   =========================== */
 
 #weekly-plan{
   text-align: center;
@@ -96,7 +119,9 @@ body{
 #myToggle:checked ~ .right{ font-weight:700; }
 #myToggle:not(:checked) ~ .left{ font-weight:700; }
 
-
+/* ===========================
+   05. Groceries Screen
+   =========================== */
 
 #groceries{
   margin: 0 auto;
@@ -114,18 +139,22 @@ body{
    list-style-type: none;
 }
 
+#grocery-shopping li{
+  line-height: 1.5rem;
+  background-color: transparent;
+  transition: background-color 0.8s ease;
+}
+
+#grocery-shopping li.highlight{
+  background-color: #F9D0AE;
+  border-radius: 4px 4px;
+}
+
 #groceries-btn{
   display: block;
   margin: 0 auto;
 }
 
-#recipes, #groceries {
-  text-align: center;
-}
 
-button:hover {
-  background-color: purple;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-}
+
+
