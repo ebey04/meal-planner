@@ -1,0 +1,117 @@
+body{
+  display: grid;
+    display: grid;
+  grid-template-columns: 1fr 2fr 1fr;  /* recipes, meal plan, grocery list */
+  gap: 1rem;
+  height: 100vh;
+  background-color: #FAFFFF;
+  font-family: sans-serif;
+  
+}
+
+#recipes{
+  margin: 0 auto;
+  
+}
+
+#recipes h2{
+  font-size: 2rem;
+  
+}
+
+#recipes-list{
+  list-style-type: none;
+  padding-left: 0;
+  
+}
+
+#recipes input{
+  margin: 1rem auto;
+}
+
+#weekly-plan{
+  text-align: center;
+  border: 3px solid purple;
+}
+
+#weekly-plan ul{
+  list-style-type: none;
+}
+
+#weekly-plan h2{
+  font-size: 4rem;
+}
+
+   /* Keep the input focusable (don’t use display:none) */
+.toggle-switch input{
+  position:absolute;
+  opacity:0;
+  width:1px; height:1px; overflow:hidden;
+}
+
+/* Lay out: Dated [track] Undated */
+.toggle-switch{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+}
+
+/* Track */
+.slider{
+  position:relative;
+  width:60px; height:34px;
+  background:#ccc; border-radius:34px;
+  display:inline-block;
+  transition:background-color .3s;
+}
+
+/* Knob */
+.slider::before{
+  content:"";
+  position:absolute; top:4px; left:4px;
+  width:26px; height:26px;
+  background:#fff; border-radius:50%;
+  transition:transform .3s;
+}
+
+/* On state */
+#myToggle:checked + .slider{ background:#17A67B; }
+#myToggle:checked + .slider::before{ transform:translateX(26px); }
+
+/* Emphasize the active side label */
+#myToggle:checked ~ .right{ font-weight:700; }
+#myToggle:not(:checked) ~ .left{ font-weight:700; }
+
+
+
+#groceries{
+  margin: 0 auto;
+}
+
+#groceries h2{
+  font-size: 2rem;
+}
+
+#groceries-manual{
+  margin: 1rem auto;
+}
+
+#grocery-shopping{
+   list-style-type: none;
+}
+
+#groceries-btn{
+  display: block;
+  margin: 0 auto;
+}
+
+#recipes, #groceries {
+  text-align: center;
+}
+
+button:hover {
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
