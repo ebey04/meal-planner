@@ -89,7 +89,7 @@ document.getElementById("groceries-btn").addEventListener("click", () => {
     }
     else { groceries.add(newItem);
         groceriesSave();
-        groceriesLoad();
+        groceriesRender();
         input.value = "";
     }
 });
