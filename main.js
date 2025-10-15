@@ -77,7 +77,7 @@ document.getElementById("groceries-btn").addEventListener("click", () => {
         let li = document.querySelector(`#grocery-shopping li[data-item="${newItem}"]`);
 
         if (!li) {
-            render();
+            groceriesRender();
         li = document.querySelector(`#grocery-shopping li[data-item="${newItem}"]`); 
     if (!li) return;  
         }
