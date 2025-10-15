@@ -43,7 +43,23 @@ const groceriesRender = () => {
 
         const displayText = item.charAt(0).toUpperCase() + item.slice(1);
         li.textContent = displayText;
-        listEl.appendChild(li);
+        
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+
+    deleteBtn.addEventListener("click", () => {
+        groceries.delete(item);
+        groceriesSave();
+        groceriesRender();
+    });
+
+    const checkBox = document.createElement("input");
+    checkBox.type = "checkbox"; 
+
+    li.prepend(checkBox);
+    li.appendChild(deleteBtn);
+    listEl.appendChild(li);
     }
 };
 
@@ -93,6 +109,20 @@ document.getElementById("groceries-btn").addEventListener("click", () => {
         input.value = "";
     }
 });
+
+const clearCheckedBtn = document.getElementById("clear-checked-btn");
+clearCheckedBtn.addEventListener("click", () => {
+    checkedBoxes = document.querySelectorAll('#grocery-shopping input[type="checkbox"]:checked');
+
+    checkedBoxes.forEach(checkbox => {
+  const itemName = checkbox.parentElement.dataset.item;
+  groceries.delete(itemName);
+
+  groceriesSave();
+  groceriesRender();
+});
+
+})
 
 groceriesLoad();
 groceriesRender();
