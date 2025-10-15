@@ -4,7 +4,7 @@ console.log("✅ JS connected!");
 /* =========================
     RECIPE SECTION
    =========================*/ 
-recipes = new Map([
+ const recipes = new Map([
   ["savory stuffed pumpkin", { 
       ingredients: ["ground turkey", "quinoa blend", "onion", "garlic", "curry powder", "cumin", "clove", "green vegetable", "sweet pumpkin", "gruyere cheese"],
       instructions: "Preheat oven to 350*. Cook quinoa blend to instructions. In a pan saute the garlic and onion till translucent. Add in the green vegetable & ground turkey. When oven is heated, cut pumpkin in half, clean out, drizzle with oil and bake cut side down for about 20 mins.Once turkey is cooked through add in spices & quinoa blend. Stuff par-baked pumpkin and bake again for about 20 minutes. Add the cheese for the last 5 minutes.",
@@ -24,7 +24,7 @@ recipes = new Map([
 
 const recipesRender = () => {
     
-}
+};
 
 
 
@@ -45,12 +45,12 @@ const groceriesRender = () => {
         li.textContent = displayText;
         listEl.appendChild(li);
     }
-}
+};
 
 const groceriesSave = () => {
     localStorage.setItem("groceries", JSON.stringify([...groceries]));
 
-}
+};
 
 const groceriesLoad = () => {
     const raw = localStorage.getItem("groceries");
@@ -65,7 +65,7 @@ const groceriesLoad = () => {
         console.warn("Bad data in storage, clearing.", e);
         localStorage.removeItem("groceries");
     }
-}
+};
 
 document.getElementById("groceries-btn").addEventListener("click", () => {
     const input = document.getElementById("groceries-manual");
