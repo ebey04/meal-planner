@@ -38,6 +38,12 @@ function recipesShow() {
     }
 }
 
+recipeContainer.addEventListener("click", function(event) {
+    if (event.target.matches("h3")){
+        const details = event.target.nextElementSibling;
+        details.classList.toggle("open");
+    }
+}
 
 
 /* =========================
