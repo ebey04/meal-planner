@@ -70,6 +70,9 @@ recipesShow();
     const toggleBtn = document.getElementById('myToggle');
     let currentView = 'list';
 
+    const meals = new Array(7).fill(''); // creates 7 empty slots
+
+
     function renderMeals(viewType) {
   mealGrid.innerHTML = ''; // clear old content
 
