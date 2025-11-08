@@ -81,7 +81,7 @@ recipesShow();
     cell.classList.add('meal-cell');
 
     const header = document.createElement('h3');
-    header.textContent = viewType === 'weekly'
+    header.textContent = viewType === 'dated'
       ? ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'][i]
       : i + 1;
 
@@ -97,11 +97,11 @@ toggleBtn.addEventListener('change', () => {
   const isChecked = toggleBtn.checked;
 
   // swap view class
-  mealGrid.classList.toggle('weekly-view', isChecked);
-  mealGrid.classList.toggle('list-view', !isChecked);
+  mealGrid.classList.toggle('dated-view', isChecked);
+  mealGrid.classList.toggle('undated-view', !isChecked);
 
   // update current view variable
-  currentView = isChecked ? 'weekly' : 'list';
+  currentView = isChecked ? 'dated' : 'undated';
 
   // re-render with the current view
   renderMeals(currentView);
