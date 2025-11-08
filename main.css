@@ -102,6 +102,10 @@ button:hover, button:focus {
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 #recipes-container h3:hover{
   transform: scale(1.03);
   opacity: 0.9;
