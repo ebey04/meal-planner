@@ -62,6 +62,34 @@ recipeContainer.addEventListener("click", (event) => {
 
 recipesShow();
 
+/* =========================
+    WEEKLY PLAN SECTION
+   =========================*/ 
+
+    const mealGrid = document.getElementById('mealGrid');
+    const toggleBtn = document.getElementById('viewToggle');
+    let currentView = 'list';
+
+    function renderMeals(viewType) {
+  mealGrid.innerHTML = ''; // clear old content
+
+  meals.forEach((meal, i) => {
+    const cell = document.createElement('div');
+    cell.classList.add('meal-cell');
+
+    const header = document.createElement('h3');
+    header.textContent = viewType === 'weekly'
+      ? ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'][i]
+      : i + 1;
+
+    const body = document.createElement('p');
+    body.textContent = meal;
+
+    cell.append(header, body);
+    mealGrid.append(cell);
+  });
+}
+
 
 /* =========================
     GROCERIES SECTION
