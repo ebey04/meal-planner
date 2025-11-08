@@ -34,13 +34,14 @@ function recipesShow() {
         details.classList.add("details");
         
         const ingredients = document.createElement("p");
-        ingredients.textContent = `Ingredients: ${recipe.ingredients.join(", ")}`;
+        ingredients.innerHTML = `<span class="bold">Ingredients:</span> ${recipe.ingredients.join(", ")}`;
 
         const instructions = document.createElement("p");
-        instructions.textContent = `Instructions: ${recipe.instructions}`;
+        instructions.innerHTML = `<span class="bold">Instructions:</span> ${recipe.instructions}`;
 
         const category = document.createElement("p");
-        category.textContent = `Category: ${recipe.category}`;
+        category.innerHTML = `<span class="bold">Category:</span> ${recipe.category}`;
+
 
 
         recipeContainer.appendChild(title);
