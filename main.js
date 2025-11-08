@@ -67,7 +67,7 @@ recipesShow();
    =========================*/ 
 
     const mealGrid = document.getElementById('mealGrid');
-    const toggleBtn = document.getElementById('viewToggle');
+    const toggleBtn = document.getElementById('myToggle');
     let currentView = 'list';
 
     function renderMeals(viewType) {
@@ -90,6 +90,22 @@ recipesShow();
   });
 }
 
+toggleBtn.addEventListener('change', () => {
+  const isChecked = toggleBtn.checked;
+
+  // swap view class
+  mealGrid.classList.toggle('weekly-view', isChecked);
+  mealGrid.classList.toggle('list-view', !isChecked);
+
+  // update current view variable
+  currentView = isChecked ? 'weekly' : 'list';
+
+  // re-render with the current view
+  renderMeals(currentView);
+});
+
+
+renderMeals(currentView);
 
 /* =========================
     GROCERIES SECTION
