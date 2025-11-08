@@ -29,21 +29,28 @@ const recipesRender = () => {
 const recipeContainer = document.getElementById("recipes-container");
 
 function recipesShow() {
-    for (let recipe of recipes ) {
+    for (let [key, recipe] of recipes ) {
         const title = document.createElement("h3");
+        title.textContent - recipe.name;
+
         const details = document.createElement("div");
         details.classList.add("details");
-        recipeContainer.appendChild('title');
-        recipeContainer.appendChild('details');
+        details.textContent = recipe.ingredients.join(",");
+
+        recipeContainer.appendChild(title);
+        recipeContainer.appendChild(details);
+        
     }
 }
 
-recipeContainer.addEventListener("click", function(event) {
-    if (event.target.matches("h3")){
-        const details = event.target.nextElementSibling;
-        details.classList.toggle("open");
+recipeContainer.addEventListener("click", (event) => {
+    if (event.target.matches("h3")) {
+    const details = event.target.nextElementSibling;
+    details.classList.toggle("open");
     }
-}
+});
+
+recipesShow();
 
 
 /* =========================
