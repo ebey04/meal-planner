@@ -197,6 +197,18 @@ button:hover, button:focus {
   transition: all 0.3s ease;
 }
 
+.meal-cell {
+  background-color: var(--surface, #f4f4f4);
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 /* ===========================
    05. Groceries Screen
    =========================== */
