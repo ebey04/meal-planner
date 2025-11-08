@@ -82,6 +82,11 @@ button:hover, button:focus {
   margin: 1rem auto;
 }
 
+.details {
+  display: none;
+}
+
+
 /* ===========================
    04. Meal Planner Screen
    =========================== */

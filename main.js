@@ -26,6 +26,18 @@ const recipesRender = () => {
     
 };
 
+const recipeContainer = document.getElementById("recipes-container");
+
+function recipesShow() {
+    for (let recipe of recipes ) {
+        const title = document.createElement("h3");
+        const details = document.createElement("div");
+        details.classList.add("details");
+        recipeContainer.appendChild('title');
+        recipeContainer.appendChild('details');
+    }
+}
+
 
 
 /* =========================
