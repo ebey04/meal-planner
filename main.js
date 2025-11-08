@@ -1,6 +1,3 @@
-console.log("✅ JS connected!");
-
-
 /* =========================
     RECIPE SECTION
    =========================*/ 
@@ -31,14 +28,26 @@ const recipeContainer = document.getElementById("recipes-container");
 function recipesShow() {
     for (let [key, recipe] of recipes ) {
         const title = document.createElement("h3");
-        title.textContent - recipe.name;
+        title.textContent = key;
 
         const details = document.createElement("div");
         details.classList.add("details");
-        details.textContent = recipe.ingredients.join(",");
+        
+        const ingredients = document.createElement("p");
+        ingredients.textContent = `Ingredients: ${recipe.ingredients.join(", ")}`;
+
+        const instructions = document.createElement("p");
+        instructions.textContent = `Instructions: ${recipe.instructions}`;
+
+        const category = document.createElement("p");
+        category.textContent = `Category: ${recipe.category}`;
+
 
         recipeContainer.appendChild(title);
         recipeContainer.appendChild(details);
+        details.appendChild(ingredients);
+        details.appendChild(instructions);
+        details.appendChild(category);
         
     }
 }
