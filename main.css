@@ -127,7 +127,7 @@ button:hover, button:focus {
   border-radius: 5px;
   box-shadow: 3px 5px 4px #c1a8a4;
   background-color: white;
-  height: 97vh;
+  height: auto;
 }
 
 #weekly-plan h2{
