@@ -84,6 +84,28 @@ button:hover, button:focus {
 
 .details {
   display: none;
+  background-color: white;
+  border-radius: 8px;
+  padding: .75rem;
+}
+
+.details p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+#recipes-container h3 {
+  color: var(--font);
+  font-family: 'Comic Neue';
+
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+#recipes-container h3:hover{
+  transform: scale(1.03);
+  opacity: 0.9;
+  color: var(--button);
 }
 
 .details.open{
