@@ -40,7 +40,8 @@ recipeForm.addEventListener("submit", (event) => {
         category: category
     })
 
-    recipesShow()
+    saveRecipes();
+    recipesShow();
 
     recipeForm.reset();
 
@@ -86,6 +87,7 @@ recipeContainer.addEventListener("click", (event) => {
     }
 });
 
+loadRecipes();
 recipesShow();
 
 function saveRecipes() {
