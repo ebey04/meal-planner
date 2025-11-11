@@ -19,6 +19,22 @@
     }]
 ]);
 
+const recipeForm = document.getElementById("recipe-form");
+
+recipeForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const title = document.getElementById("title").value;
+    const ingredients = document.getElementById("ingredients").value;
+    const instructions = document.getElementById("instructions").value;
+
+    recipes.set(title, {
+        ingredients: ingredients,
+        instructions: instructions
+    })
+})
+
+
 
 const recipeContainer = document.getElementById("recipes-container");
 
