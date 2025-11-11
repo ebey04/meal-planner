@@ -42,7 +42,7 @@ button{
   border-color:#855172;
   box-shadow: 2px 3px 4px #855172;
   padding: .5rem;
-  margin: .5rem;
+  margin: 1rem;
 }
 
 button:hover, button:focus {
@@ -73,17 +73,36 @@ button:hover, button:focus {
 
 #recipe-legend{
   font-size: 1.5rem;
+  letter-spacing: 0.5px;
 }
 
 fieldset{
   display: flex;
   flex-direction: column;
   gap: .5rem;
+  border: 1.75px solid var(--button);
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px grey;
 }
 
 fieldset label{
   font-weight: 400;
 }
+
+input[type="text"], textarea {
+  width: 95%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 0.4rem;
+}
+
+input[type="text"]:focus, textarea:focus{
+  outline: none; 
+  border-color: var(--button); 
+  box-shadow: 0 0 6px 2px color-mix(in srgb, var(--button) 60%, white);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
 
 .details {
   display: none;
