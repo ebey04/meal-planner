@@ -58,7 +58,7 @@ button:hover, button:focus {
   text-align: center;
 }
 /* ===========================
-   03. Recipe Screen
+    03. Recipe Screen
    =========================== */
 
 #recipes{
@@ -78,8 +78,14 @@ button:hover, button:focus {
   
 }
 
-#recipes input{
-  margin: 1rem auto;
+
+
+fieldset{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 50%;
+  height: auto;
 }
 
 .details {

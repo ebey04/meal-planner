@@ -31,11 +31,22 @@
 <!-- RECIPES SECTION-->
 <div id="recipes">
   <h2>Recipes</h2>
-  <ul id="recipes-list">
-  </ul>
   
-  <input type="text" placeholder="Add Recipe">
-  <button id="recipe-btn">Add Here</button>
+  <form id="recipe-form">
+    <fieldset>
+      <legend>New Recipe</legend>
+      <label for="title">Recipe Title</label>
+      <input type="text" id="title" name="title">
+
+      <label for="ingredients">Ingredients</label>
+      <textarea id="ingredients" name="ingredients" rows="5"></textarea>
+
+      <label for="instructions">Instructions</label>
+      <textarea id="instructions" name="instructions" rows="5"></textarea>
+
+      <button id="recipe-btn" type="button">Add Here</button>
+    </fieldset>
+  </form>
   
   <p id="filter">Filter By Type</p>
 
