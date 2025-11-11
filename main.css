@@ -61,31 +61,28 @@ button:hover, button:focus {
     03. Recipe Screen
    =========================== */
 
-#recipes{
-  margin: 0 auto;
-  
-}
-
 #recipes h2{
   font-size: 2rem;
   font-family: 'Comic Neue';
   color: var(--font);
 }
 
-#recipes-list{
-  list-style-type: none;
-  padding-left: 0;
-  
+#recipe-form{
+  text-align: left;
 }
 
-
+#recipe-legend{
+  font-size: 1.5rem;
+}
 
 fieldset{
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  width: 50%;
-  height: auto;
+  gap: .5rem;
+}
+
+fieldset label{
+  font-weight: 400;
 }
 
 .details {
