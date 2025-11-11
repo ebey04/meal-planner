@@ -88,6 +88,20 @@ recipeContainer.addEventListener("click", (event) => {
 
 recipesShow();
 
+function saveRecipes() {
+  // Convert Map → Array before saving
+  localStorage.setItem("myRecipes", JSON.stringify([...recipes]));
+}
+
+function loadRecipes() {
+  const storedRecipes = localStorage.getItem("myRecipes");
+  if (storedRecipes) {
+    // Parse the stored array and rebuild Map
+    recipes = new Map(JSON.parse(storedRecipes));
+  }
+}
+
+
 /* =========================
     WEEKLY PLAN SECTION
    =========================*/ 
