@@ -28,10 +28,18 @@ recipeForm.addEventListener("submit", (event) => {
     const ingredients = document.getElementById("ingredients").value;
     const instructions = document.getElementById("instructions").value;
 
+    if (recipes.has(title)) {
+    alert("That recipe already exists!");
+    return;
+}
+
     recipes.set(title, {
         ingredients: ingredients,
         instructions: instructions
     })
+
+    recipeForm.reset();
+
 })
 
 
