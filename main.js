@@ -34,9 +34,11 @@ recipeForm.addEventListener("submit", (event) => {
 }
 
     recipes.set(title, {
-        ingredients: ingredients,
+        ingredients: ingredients.split(','),
         instructions: instructions
     })
+
+    recipesShow()
 
     recipeForm.reset();
 
@@ -47,6 +49,7 @@ recipeForm.addEventListener("submit", (event) => {
 const recipeContainer = document.getElementById("recipes-container");
 
 function recipesShow() {
+    recipeContainer.innerHTML = "";
     for (let [key, recipe] of recipes ) {
         const title = document.createElement("h3");
         title.textContent = key;
