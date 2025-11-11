@@ -27,6 +27,7 @@ recipeForm.addEventListener("submit", (event) => {
     const title = document.getElementById("title").value;
     const ingredients = document.getElementById("ingredients").value;
     const instructions = document.getElementById("instructions").value;
+    const category = document.getElementById("category").value;
 
     if (recipes.has(title)) {
     alert("That recipe already exists!");
@@ -35,7 +36,8 @@ recipeForm.addEventListener("submit", (event) => {
 
     recipes.set(title, {
         ingredients: ingredients.split(','),
-        instructions: instructions
+        instructions: instructions,
+        category: category
     })
 
     recipesShow()
