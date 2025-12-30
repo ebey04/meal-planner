@@ -4,7 +4,7 @@ import {recipes, recipesShow, saveRecipes, loadRecipes} from "./recipes.js";
 
 
 
-let currentView = 'list';
+let currentView = 'undated';
 
 /*DOM ELEMENTS*/
 
@@ -61,7 +61,7 @@ toggleBtn.addEventListener('change', () => {
     currentView = isChecked ? 'dated' : 'undated';
 
     // re-render with the current view
-    renderMeals(currentView);
+    renderMeals(mealGrid, currentView);
 });
 
 clearCheckedBtn.addEventListener("click", () => {

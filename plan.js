@@ -2,7 +2,7 @@
 const meals = new Array(7).fill(''); // creates 7 empty slots
 
 
-function renderMeals(mealGrid, viewType) {
+function renderMeals(mealGrid, currentView) {
     mealGrid.innerHTML = ''; // clear old content
 
     meals.forEach((meal, i) => {
@@ -10,7 +10,7 @@ function renderMeals(mealGrid, viewType) {
         cell.classList.add('meal-cell');
 
         const header = document.createElement('h3');
-        header.textContent = viewType === 'dated'
+        header.textContent = currentView === 'dated'
             ? ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'][i]
             : i + 1;
 
