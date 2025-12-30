@@ -1,9 +1,9 @@
 
-const meals = new Array(7).fill(''); // creates 7 empty slots
+const meals = new Array(7).fill(''); 
 
 
 function renderMeals(mealGrid, currentView) {
-    mealGrid.innerHTML = ''; // clear old content
+    mealGrid.innerHTML = ''; 
 
     meals.forEach((meal, i) => {
         const cell = document.createElement('div');
@@ -23,5 +23,17 @@ function renderMeals(mealGrid, currentView) {
     )
 }
 
+function saveMeals() {
+  // Convert Map → Array before saving
+    localStorage.setItem("myMeals", JSON.stringify(meals));
+}
 
-export {renderMeals}
+function loadMeals() {
+    const storedMeals = localStorage.getItem("myMeals");
+    if (storedMeals) {
+        meals = JSON.parse(storedMeals);
+    }
+}
+
+
+export {meals, renderMeals}

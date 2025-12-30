@@ -1,5 +1,5 @@
 import {groceries, groceriesLoad, groceriesRender, groceriesSave} from "./groceries.js";
-import {renderMeals} from "./plan.js";
+import {meals, renderMeals} from "./plan.js";
 import {recipes, recipesShow, saveRecipes, loadRecipes} from "./recipes.js";
 
 
@@ -15,6 +15,8 @@ const toggleBtn = document.getElementById('myToggle');
 const clearCheckedBtn = document.getElementById("clear-checked-btn");
 
 /*LISTENERS*/
+
+
 
 recipeForm.addEventListener("submit", (event) => {
     event.preventDefault();
