@@ -16,8 +16,8 @@ let recipes = new Map([
     }]
 ]);
 
-function recipesShow() {
-    recipeContainer.innerHTML = "";
+function recipesShow(container) {
+    container.innerHTML = "";
     for (let [key, recipe] of recipes ) {
         const title = document.createElement("h3");
         title.textContent = key;
@@ -36,8 +36,8 @@ function recipesShow() {
 
 
 
-        recipeContainer.appendChild(title);
-        recipeContainer.appendChild(details);
+        container.appendChild(title);
+        container.appendChild(details);
         details.appendChild(ingredients);
         details.appendChild(instructions);
         details.appendChild(category);
@@ -58,4 +58,4 @@ function loadRecipes() {
     }
 }
 
-export {recipesShow, saveRecipes, loadRecipes}
+export {recipes, recipesShow, saveRecipes, loadRecipes}

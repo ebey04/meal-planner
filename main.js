@@ -1,6 +1,10 @@
-import {groceriesLoad, groceriesRender, groceriesSave} from "./groceries.js";
+import {groceries, groceriesLoad, groceriesRender, groceriesSave} from "./groceries.js";
 import {renderMeals} from "./plan.js";
-import {recipesShow, saveRecipes, loadRecipes} from "./recipes.js";
+import {recipes, recipesShow, saveRecipes, loadRecipes} from "./recipes.js";
+
+
+
+let currentView = 'list';
 
 /*DOM ELEMENTS*/
 
@@ -32,7 +36,7 @@ recipeForm.addEventListener("submit", (event) => {
     })
 
     saveRecipes();
-    recipesShow();
+    recipesShow(recipeContainer);
 
     recipeForm.reset();
 
@@ -103,7 +107,7 @@ document.getElementById("groceries-btn").addEventListener("click", () => {
 /*FUNCTION CALLS*/
 
 loadRecipes();
-recipesShow();
-renderMeals(currentView);
+recipesShow(recipeContainer);
+renderMeals(mealGrid, currentView);
 groceriesLoad();
 groceriesRender();

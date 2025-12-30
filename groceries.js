@@ -50,4 +50,4 @@ const groceriesLoad = () => {
     }
 };
 
-export {groceriesLoad, groceriesRender, groceriesSave}
+export {groceries, groceriesLoad, groceriesRender, groceriesSave}
