@@ -24,7 +24,6 @@ function renderMeals(mealGrid, currentView) {
 }
 
 function saveMeals() {
-  // Convert Map → Array before saving
     localStorage.setItem("myMeals", JSON.stringify(meals));
 }
 
@@ -35,5 +34,10 @@ function loadMeals() {
     }
 }
 
+function setMeals(index, value) {
+    meals[index] = value;
+    saveMeals();
+}
 
-export {meals, renderMeals}
+
+export {meals, renderMeals, saveMeals, loadMeals, setMeals}

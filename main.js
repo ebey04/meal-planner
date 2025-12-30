@@ -1,5 +1,5 @@
 import {groceries, groceriesLoad, groceriesRender, groceriesSave} from "./groceries.js";
-import {meals, renderMeals} from "./plan.js";
+import {meals, renderMeals, saveMeals, loadMeals, setMeals} from "./plan.js";
 import {recipes, recipesShow, saveRecipes, loadRecipes} from "./recipes.js";
 
 
