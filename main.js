@@ -16,6 +16,23 @@ const clearCheckedBtn = document.getElementById("clear-checked-btn");
 
 /*LISTENERS*/
 
+mealGrid.addEventListener("click", (event) => 
+    const cell = event.target.closest(".meal-cell");
+    if(!cell) return;
+
+    const index = cell.dataset.index; 
+
+    const p = cell.querySelector("p");
+    if (!p) return;
+
+    const textarea = document.createElement("textarea");
+    textarea.value = p.textContent;
+
+    p.replaceWith(textarea);
+    textarea.focus();
+
+    
+)
 
 
 recipeForm.addEventListener("submit", (event) => {
