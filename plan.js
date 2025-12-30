@@ -8,6 +8,7 @@ function renderMeals(mealGrid, currentView) {
     meals.forEach((meal, i) => {
         const cell = document.createElement('div');
         cell.classList.add('meal-cell');
+        cell.dataset.index = i;
 
         const header = document.createElement('h3');
         header.textContent = currentView === 'dated'
