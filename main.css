@@ -1,27 +1,13 @@
-/* ===================
-01. Utilities
-======================*/
-
-.sr-only {
-  position: absolute;
-  left: -999px;
-}
-.sr-only:focus {
-  position: static;
-  left: auto;
-  background: yellow;
-  padding: 5px;
-}
 
 /* ===========================
-   02. Layout
-   =========================== */
+  02. Layout
+=========================== */
 
-   :root{
+  :root{
     --background: #f5f0f0;
     --font: #2f2220;
     --button: #693B58;
-   }
+  }
 
 
 body{
