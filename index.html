@@ -19,75 +19,74 @@
   <!-- Font or Icon Libraries (optional) -->
   <!-- Google Fonts -->
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+<script type="module" src="./main.js"></script>
 
 
 </head>
 <body>
-<a href="#main" class="sr-only">Skip to main content</a> <!--skip link-->
 
-<!-- RECIPES SECTION-->
-<div id="recipes">
-  <h2>Recipes</h2>
-  
-  <form id="recipe-form">
-    <fieldset>
-      <legend id="recipe-legend">New Recipe</legend>
-      <label for="title">Recipe Title</label>
-      <input type="text" id="title" name="title">
+  <!-- RECIPES SECTION-->
+  <div id="recipes">
+    <h2>Recipes</h2>
+    
+    <form id="recipe-form">
+      <fieldset>
+        <legend id="recipe-legend">New Recipe</legend>
+        <label for="title">Recipe Title</label>
+        <input type="text" id="title" name="title">
 
-      <label for="ingredients">Ingredients</label>
-      <textarea id="ingredients" name="ingredients" rows="3"></textarea>
+        <label for="ingredients">Ingredients</label>
+        <textarea id="ingredients" name="ingredients" rows="3"></textarea>
 
-      <label for="instructions">Instructions</label>
-      <textarea id="instructions" name="instructions" rows="3"></textarea>
+        <label for="instructions">Instructions</label>
+        <textarea id="instructions" name="instructions" rows="3"></textarea>
 
-      <label for="category">Category</label>
-      <input id="category" type="text" name="category">
+        <label for="category">Category</label>
+        <input id="category" type="text" name="category">
 
-      <button id="recipe-btn" type="submit">Add Here</button>
-    </fieldset>
-  </form>
-  
-  <p id="filter">Filter By Type</p>
+        <button id="recipe-btn" type="submit">Add Here</button>
+      </fieldset>
+    </form>
+    
+    <p id="filter">Filter By Type</p>
 
-  <div id="recipes-container"></div>
-</div>
+    <div id="recipes-container"></div>
+  </div>
 
-<!-- WEEKLY PLANNER SECTION-->
+  <!-- WEEKLY PLANNER SECTION-->
 
-<div id="weekly-plan">
-  <h2><img src="./imgs/meal svg.svg" class="icon"> Weekly Plan</h2>
-  
-  <p id="template">
-  <label class="toggle-switch">
-    <span class="left">Undated</span>
-    <input type="checkbox" id="myToggle">
-    <span class="slider" aria-hidden="true"></span>
-    <span class="right">Dated</span>
-  </label>
-</p>
+  <div id="weekly-plan">
+    <h2><img src="./imgs/meal svg.svg" class="icon"> Weekly Plan</h2>
+    
+    <p id="template">
+    <label class="toggle-switch">
+      <span class="left">Undated</span>
+      <input type="checkbox" id="myToggle">
+      <span class="slider" aria-hidden="true"></span>
+      <span class="right">Dated</span>
+    </label>
+  </p>
 
-  
-  <section id="mealGrid" class="meal-grid list-view"></section>
-  
-</div>
+    
+    <section id="mealGrid" class="meal-grid list-view"></section>
+    
+  </div>
 
-<!-- GROCERIES SECTION-->
+  <!-- GROCERIES SECTION-->
 
-<div id="groceries">
-  <h2>Grocery List</h2>
-  
-  <ul id="grocery-shopping">
-</ul>
+  <div id="groceries">
+    <h2>Grocery List</h2>
+    
+    <ul id="grocery-shopping">
+  </ul>
 
-<input type="text" id="groceries-manual" placeholder="Manually Add Item Here">
-<button id="groceries-btn" type="button">Add Item Here</button>
+  <input type="text" id="groceries-manual" placeholder="Manually Add Item Here">
+  <button id="groceries-btn" type="button">Add Item Here</button>
 
-<button id="clear-checked-btn" type="button">Clear Checked Items</button>
-</div>
-
-<script src="main.js" defer></script>
+  <button id="clear-checked-btn" type="button">Clear Checked Items</button>
+  </div>
 </body>
